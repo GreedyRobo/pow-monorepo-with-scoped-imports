@@ -10,7 +10,7 @@ type Location = {
   meta: string;
 };
 
-type Response = {
+type Metadata = {
   ip: string;
   providers: {
     dbip: Location;
@@ -22,7 +22,7 @@ type Response = {
 
 export class LocationClient {
   public async getLocation() {
-    const { data } = await axios.get<Response>("https://ip.oxylabs.io/location");
+    const { data } = await axios.get<Metadata>("https://ip.oxylabs.io/location");
 
     return data;
   }
