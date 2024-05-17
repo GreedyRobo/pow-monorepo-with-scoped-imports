@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./*": "./dist/*",
-    "./package.json": "./package.json"
+    "./*": "./dist/*/index.js"
   },
   "scripts": {
     "prepare": "rimraf ./dist ./tsconfig.tsbuildinfo && tsc -p .",
