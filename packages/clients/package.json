@@ -1,0 +1,15 @@
+{
+  "name": "@test/clients",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "prepare": "rimraf ./dist ./tsconfig.tsbuildinfo && tsc -p .",
+    "prettier": "prettier --write './src/**/*.ts' --cache-location='./node_modules/.cache/prettier/.prettier-cache' --ignore-path='../.gitignore'",
+    "lint": "eslint --ext .ts './src'",
+    "test:compile": "tsc --noEmit"
+  }
+}
